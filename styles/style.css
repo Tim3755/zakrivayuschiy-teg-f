@@ -152,6 +152,14 @@
   z-index: 1;
 }
 
+@supports((text-stroke: 0.2px white) or (-webkit-text-stroke: 0.2px white)) {
+  .label {
+      -webkit-text-stroke: 0.2px white;
+      text-stroke: 0.2px white;
+      text-shadow: none;
+  }
+} 
+
 .card-title {
   font-family: var(--main-font);
   font-size: 18px;
