@@ -4,3 +4,341 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+  .theme-auto .page {
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0 2px,
+        #000 2px 4px
+      ),
+      repeating-linear-gradient(180deg, transparent 0 2px, #000 2px 4px),
+      linear-gradient(180deg, #007f0c 0.01%, #004306);
+    color: #00cc14;
+  }
+
+  .theme-auto .header,
+  .theme-auto .section,
+  .theme-auto .footer {
+    background-color: #000;
+  }
+
+  .theme-auto .header,
+  .theme-auto .card-list__item,
+  .theme-auto .card__like-button,
+  .theme-auto .label__image,
+  .theme-auto .footer {
+    border: 2px solid #007f0c;
+  }
+
+  .theme-auto .theme-menu__button__auto {
+    pointer-events: none;
+  }
+
+  .theme-auto .theme-menu__button::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin-top: 2px;
+    background-color: #007f0c;
+    transition: width 0.3s, background-color 0.5s;
+  }
+
+  .theme-auto .theme-menu__button:focus-visible::after {
+    width: 100%;
+    opacity: 0.6;
+  }
+
+  .theme-auto .card-title {
+    font-weight: 785;
+  }
+
+  .theme-auto .theme-menu__button__auto {
+    opacity: 0.6;
+  }
+  .theme-auto .card-text__block {
+    font-weight: 465;
+  }
+
+  .theme-auto .label {
+    -webkit-text-stroke: 0.2px #000;
+  }
+
+  .theme-auto .theme-menu__list::after {
+    content: "▶";
+    position: absolute;
+    right: 100px;
+    top: 27px;
+    animation: arrow 0.5s linear infinite;
+    opacity: 0.6;
+  }
+
+  .theme-auto .card__like-button:focus,
+  .theme-auto .footer-button:focus {
+    outline: none;
+  }
+
+  .theme-auto .card__like-button:focus-visible,
+  .theme-auto .footer-button:focus-visible {
+    box-shadow: 2px 2px 0px #00cc14;
+    transition: box-shadow 0.5s;
+  }
+
+  .theme-auto .button__text {
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    color: #00cc14;
+    mix-blend-mode: difference;
+  }
+
+  .theme-auto .card__like-button::after {
+    content: "";
+    display: block;
+    background-color: #00cc14;
+    translate: -100%;
+    transition: translate 0.5s ease-in-out;
+    position: relative;
+    z-index: 0;
+  }
+
+  .theme-auto .card__like-button:hover::after {
+    translate: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .theme-auto .core {
+    transition: 0.03s;
+  }
+
+  .theme-auto .like-icon:hover .core {
+    fill: #00cc14;
+    transition: fill 0.3s;
+  }
+
+  .theme-auto .main-body {
+    transition: 0.3s;
+  }
+
+  .theme-auto .like-icon:hover .main-body {
+    fill: #00cc14;
+    transition: fill 0.3s 0.05s;
+  }
+
+  .theme-auto .like-icon:active .core {
+    fill: #ff0000;
+    transition: fill 0.3s;
+  }
+
+  .theme-auto .like-icon:active .main-body {
+    fill: #ff0000;
+    transition: fill 0.3s 0.05s;
+  }
+}
+
+.theme-dark .page {
+  background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0 2px,
+      #000 2px 4px
+    ),
+    repeating-linear-gradient(180deg, transparent 0 2px, #000 2px 4px),
+    linear-gradient(180deg, #007f0c 0.01%, #004306);
+  color: #00cc14;
+}
+
+.theme-dark .header,
+.theme-dark .section,
+.theme-dark .footer {
+  background-color: #000;
+}
+
+.theme-dark .header,
+.theme-dark .card-list__item,
+.theme-dark .card__like-button,
+.theme-dark .label__image,
+.theme-dark .footer {
+  border: 2px solid #007f0c;
+}
+
+.theme-dark .theme-menu__button__dark {
+  pointer-events: none;
+}
+.theme-dark .card-title {
+  font-weight: 785;
+}
+
+.theme-dark .theme-menu__button__dark {
+  opacity: 0.6;
+}
+
+.theme-dark .theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 2px;
+  background-color: #007f0c;
+  transition: width 0.3s, background-color 0.5s;
+}
+
+.theme-dark .theme-menu__button:focus-visible::after {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.theme-dark .card-text__block {
+  font-weight: 465;
+}
+
+.theme-dark .label {
+  -webkit-text-stroke: 0.2px #000;
+}
+
+.theme-dark .theme-menu__list::after {
+  content: "▶";
+  position: absolute;
+  right: 100px;
+  animation: arrow 0.5s linear infinite;
+  opacity: 0.6;
+}
+
+.theme-dark dialog {
+  background-color: #000;
+  color: #007f0c;
+}
+
+.theme-dark .close-button {
+  border: 1px solid #007f0c;
+}
+
+.theme-dark .circuit {
+  fill: #00cc14;
+}
+
+.theme-dark .sparks,
+.theme-dark .main-body,
+.theme-dark .core {
+  fill: #000;
+}
+
+.theme-dark .contour {
+  fill: #00cc14;
+}
+
+.theme-dark .card__like-button:focus,
+.theme-dark .footer-button:focus {
+  outline: none;
+}
+
+.theme-dark .card__like-button:focus-visible,
+.theme-dark .footer-button:focus-visible {
+  box-shadow: 2px 2px 0px #00cc14;
+  transition: box-shadow 0.5s;
+}
+
+.theme-dark .button__text {
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+  color: #00cc14;
+  mix-blend-mode: difference;
+}
+
+.theme-dark .card__like-button::after {
+  content: "";
+  display: block;
+  background-color: #00cc14;
+  translate: -100%;
+  transition: translate 0.5s ease-in-out;
+  position: relative;
+  z-index: 0;
+}
+
+.theme-dark .card__like-button:hover::after {
+  translate: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.theme-dark .core {
+  transition: 0.03s;
+}
+
+.theme-dark .like-icon:hover .core {
+  fill: #00cc14;
+  transition: fill 0.3s;
+}
+
+.theme-dark .main-body {
+  transition: 0.3s;
+}
+
+.theme-dark .like-icon:hover .main-body {
+  fill: #00cc14;
+  transition: fill 0.3s 0.05s;
+}
+
+.theme-dark .like-icon:active .core {
+  fill: #ff0000;
+  transition: fill 0.3s;
+}
+
+.theme-dark .like-icon:active .main-body {
+  fill: #ff0000;
+  transition: fill 0.3s 0.05s;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-auto .theme-menu__list::after {
+    content: "▶";
+    position: absolute;
+    right: 100px;
+    top: 27px;
+    animation: arrow 0.5s ease-in-out infinite;
+    opacity: 0.6;
+  }
+
+  .theme-auto .theme-menu__button__auto {
+    opacity: 0.6;
+  }
+
+  .theme-auto .theme-menu__button__auto {
+    pointer-events: none;
+  }
+
+  .theme-auto .card__icon-button:focus {
+    outline: none;
+  }
+}
+
+.theme-light .theme-menu__button__light {
+  pointer-events: none;
+}
+
+.theme-light .theme-menu__button__light {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-light .theme-menu__list::after {
+  content: "▶";
+  position: absolute;
+  right: 100px;
+  top: 56px;
+  animation: arrow 0.5s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.theme-light .theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: color 0.5s;
+}

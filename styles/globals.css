@@ -51,3 +51,20 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+.title,
+.theme-menu__button,
+.card__like-button,
+.header-title,
+.label,
+.footer-button,
+dialog {
+  font-family: var(--secondary-font), monospace;
+}
+
+.theme-menu__button,
+.label,
+.card__like-button,
+.footer-button {
+  font-size: 14px;
+}
