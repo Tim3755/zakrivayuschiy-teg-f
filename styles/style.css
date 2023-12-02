@@ -30,6 +30,7 @@
   padding-top: 102px;
   margin: auto;
   color: #000;
+  font-variation-settings: 'wght' 400;
 }
 
 .header {
@@ -42,7 +43,7 @@
   background-color: white;
 }
 
-.header-label {
+.header-label__link {
   text-decoration: none;
 }
 
@@ -54,15 +55,15 @@
   margin-top: clamp(7.5rem, 7.153rem + 1.497vw, 8.5rem);
 }
 
-.main-title {
-  font-size: clamp(3.063rem, 2.715rem + 1.497vw, 4.063rem);
+.header-label {
+  font-size: clamp(3.0625rem, 2.7091rem + 1.5038vw, 4.0625rem);
 }
 
-.header-title {
+.main-title {
   font-size: clamp(0.875rem, 0.634rem + 0.893vw, 1.438rem);
 }
 
-.header-title,
+.main-title,
 .theme-menu__button {
   text-transform: uppercase;
 }
@@ -302,6 +303,10 @@ dialog::backdrop {
 
   .header {
     height: 49vh;
+  }
+
+  .header-label {
+    font-size: clamp(2.75rem, 0.9318rem + 9.0909vw, 3.0625rem);
   }
 
   .footer {
