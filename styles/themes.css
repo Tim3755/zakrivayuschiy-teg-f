@@ -34,6 +34,7 @@
 
   .theme-auto .theme-menu__button__auto {
     pointer-events: none;
+    opacity: 0.6;
   }
 
   .theme-auto .theme-menu__button::after {
@@ -55,9 +56,6 @@
     font-weight: 785;
   }
 
-  .theme-auto .theme-menu__button__auto {
-    opacity: 0.6;
-  }
   .theme-auto .card-text__block {
     font-weight: 465;
   }
@@ -167,13 +165,11 @@
 
 .theme-dark .theme-menu__button__dark {
   pointer-events: none;
-}
-.theme-dark .card-title {
-  font-weight: 785;
+  opacity: 0.6;
 }
 
-.theme-dark .theme-menu__button__dark {
-  opacity: 0.6;
+.theme-dark .card-title {
+  font-weight: 785;
 }
 
 .theme-dark .theme-menu__button::after {
@@ -325,7 +321,7 @@
   opacity: 0.6;
 }
 
-.theme-menu__button:focus {
+.theme-light .theme-menu__button:focus {
   outline: none;
 }
 
