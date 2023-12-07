@@ -39,7 +39,6 @@
   border: 2px solid var(--accent-color-light);
   background-color: white;
   max-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
-  border: 2px solid var(--accent-color-light);
 }
 
 .header-label__link {

@@ -96,6 +96,7 @@
 
   .theme-auto .core {
     transition: 0.03s;
+    fill: var(--accent-color-light);
   }
 
   .theme-auto .like-icon:hover .core {
@@ -105,6 +106,7 @@
 
   .theme-auto .main-body {
     transition: 0.3s;
+    fill: var(--accent-color-light);
   }
 
   .theme-auto .like-icon:hover .main-body {
@@ -120,13 +122,6 @@
   .theme-auto .like-icon:active .main-body {
     fill: var(--heart-animation-color);
     transition: fill 0.3s 0.05s;
-  }
-
-  .theme-auto .core {
-    fill: var(--accent-color-light);
-  }
-  .theme-auto .main-body {
-    fill: var(--accent-color-light);
   }
 
   .theme-auto .dialog,
@@ -245,8 +240,10 @@
 .theme-dark .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color-dark);
 }
+
 .theme-dark .core {
   transition: 0.03s;
+  fill: var(--accent-color-light);
 }
 
 .theme-dark .like-icon:hover .core {
@@ -256,6 +253,7 @@
 
 .theme-dark .main-body {
   transition: 0.3s;
+  fill: var(--accent-color-light);
 }
 
 .theme-dark .like-icon:hover .main-body {
@@ -276,14 +274,6 @@
 .theme-dark .footer-button__text,
 .theme-dark .floppy {
   color: var(--accent-color-dark);
-}
-
-.theme-dark .main-body {
-  fill: var(--accent-color-light);
-}
-
-.theme-dark .core {
-  fill: var(--accent-color-light);
 }
 
 @media (prefers-color-scheme: light) {
