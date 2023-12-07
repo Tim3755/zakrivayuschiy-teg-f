@@ -52,14 +52,13 @@ ol {
   white-space: nowrap;
 }
 
-.title,
 .theme-menu__button,
 .card__like-button,
 .header-title,
 .label,
 .footer-button,
 dialog {
-  font-family: var(--secondary-font), monospace;
+  font-family: var(--secondary-font), monospace, arial;
 }
 
 .theme-menu__button,

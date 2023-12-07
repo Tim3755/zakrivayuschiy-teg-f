@@ -11,30 +11,24 @@
     background-image: repeating-linear-gradient(
         90deg,
         transparent 0 2px,
-        #000 2px 4px
+        var(--accent-color-light) 2px 4px
       ),
       repeating-linear-gradient(180deg, transparent 0 2px, #000 2px 4px),
       linear-gradient(180deg, #007f0c 0.01%, #004306);
-    color: #00cc14;
+    color: var(--accent-color-dark);
   }
 
   .theme-auto .header,
-  .theme-auto .section,
-  .theme-auto .footer {
-    background-color: #000;
+  .theme-auto .footer,
+  .theme-auto .card-list__item {
+    background-color: var(--accent-color-light);
   }
 
   .theme-auto .header,
   .theme-auto .card-list__item,
   .theme-auto .card__like-button,
-  .theme-auto .label__image,
   .theme-auto .footer {
-    border: 2px solid #007f0c;
-  }
-
-  .theme-auto .theme-menu__button__auto {
-    pointer-events: none;
-    opacity: 0.6;
+    border: 2px solid var(--accent-color-dark);
   }
 
   .theme-auto .theme-menu__button::after {
@@ -61,16 +55,7 @@
   }
 
   .theme-auto .label {
-    -webkit-text-stroke: 0.2px #000;
-  }
-
-  .theme-auto .theme-menu__list::after {
-    content: "▶";
-    position: absolute;
-    right: 100px;
-    top: 27px;
-    animation: arrow 0.5s linear infinite;
-    opacity: 0.6;
+    -webkit-text-stroke: 0.2px var(--accent-color-light);
   }
 
   .theme-auto .card__like-button:focus,
@@ -80,7 +65,7 @@
 
   .theme-auto .card__like-button:focus-visible,
   .theme-auto .footer-button:focus-visible {
-    box-shadow: 2px 2px 0px #00cc14;
+    box-shadow: 2px 2px 0px var(--accent-color-dark);
     transition: box-shadow 0.5s;
   }
 
@@ -88,18 +73,13 @@
     position: absolute;
     z-index: 1;
     transition: 0.5s ease-in-out;
-    color: #00cc14;
+    color: var(--accent-color-dark);
     mix-blend-mode: difference;
   }
 
-  .theme-auto .card__like-button::after {
-    content: "";
-    display: block;
-    background-color: #00cc14;
-    translate: -100%;
-    transition: translate 0.5s ease-in-out;
-    position: relative;
-    z-index: 0;
+  .theme-auto .footer-button__text,
+  .theme-auto .floppy-icon {
+  color: var(--accent-color-dark);
   }
 
   .theme-auto .card__like-button:hover::after {
@@ -109,12 +89,16 @@
     position: relative;
   }
 
+  .theme-auto .card__icon-button:focus-visible {
+    border: 2px solid var(--accent-color-dark);
+  }
+
   .theme-auto .core {
     transition: 0.03s;
   }
 
   .theme-auto .like-icon:hover .core {
-    fill: #00cc14;
+    fill: var(--accent-color-dark);
     transition: fill 0.3s;
   }
 
@@ -123,18 +107,36 @@
   }
 
   .theme-auto .like-icon:hover .main-body {
-    fill: #00cc14;
+    fill: var(--accent-color-dark);
     transition: fill 0.3s 0.05s;
   }
 
   .theme-auto .like-icon:active .core {
-    fill: #ff0000;
+    fill: var(--heart-animation-color);
     transition: fill 0.3s;
   }
 
   .theme-auto .like-icon:active .main-body {
-    fill: #ff0000;
+    fill: var(--heart-animation-color);
     transition: fill 0.3s 0.05s;
+  }
+
+  .theme-auto .core {
+    fill: var(--accent-color-light);
+  }
+  .theme-auto .main-body {
+    fill: var(--accent-color-light);
+  }
+
+  .theme-auto .dialog,
+  .theme-auto .close-button {
+    border: 2px solid var(--accent-color-dark);
+  }
+
+  .theme-auto .footer-button__text,
+  .theme-auto .floppy,
+  .theme-auto .dialog-description {
+  color: var(--accent-color-dark);
   }
 }
 
@@ -142,34 +144,28 @@
   background-image: repeating-linear-gradient(
       90deg,
       transparent 0 2px,
-      #000 2px 4px
+      var(--accent-color-light) 2px 4px
     ),
-    repeating-linear-gradient(180deg, transparent 0 2px, #000 2px 4px),
+    repeating-linear-gradient(180deg, transparent 0 2px, var(--accent-color-light) 2px 4px),
     linear-gradient(180deg, #007f0c 0.01%, #004306);
-  color: #00cc14;
+  color: var(--accent-color-dark);
 }
 
 .theme-dark .header,
-.theme-dark .section,
-.theme-dark .footer {
-  background-color: #000;
+.theme-dark .footer,
+.theme-dark .card-list__item {
+  background-color: var(--accent-color-light);
 }
 
 .theme-dark .header,
 .theme-dark .card-list__item,
 .theme-dark .card__like-button,
-.theme-dark .label__image,
 .theme-dark .footer {
-  border: 2px solid #007f0c;
-}
-
-.theme-dark .theme-menu__button__dark {
-  pointer-events: none;
-  opacity: 0.6;
+  border: 2px solid var(--accent-color-dark);
 }
 
 .theme-dark .card-title {
-  font-weight: 785;
+  font-variation-settings: 'wght' 785;
 }
 
 .theme-dark .theme-menu__button::after {
@@ -192,38 +188,28 @@
 }
 
 .theme-dark .label {
-  -webkit-text-stroke: 0.2px #000;
+  -webkit-text-stroke: 0.2px var(--accent-color-light);
 }
 
-.theme-dark .theme-menu__list::after {
-  content: "▶";
-  position: absolute;
-  right: 100px;
-  animation: arrow 0.5s linear infinite;
-  opacity: 0.6;
+
+.theme-dark .dialog {
+  background-color: var(--accent-color-light);
+  color: var(--accent-color-dark);
 }
 
-.theme-dark dialog {
-  background-color: #000;
-  color: #007f0c;
-}
-
-.theme-dark .close-button {
-  border: 1px solid #007f0c;
-}
-
-.theme-dark .circuit {
-  fill: #00cc14;
+.theme-dark .close-button,
+.theme-dark .close-button:focus-visible {
+  border: 2px solid var(--accent-color-dark);
 }
 
 .theme-dark .sparks,
 .theme-dark .main-body,
 .theme-dark .core {
-  fill: #000;
+  fill: none;
 }
 
 .theme-dark .contour {
-  fill: #00cc14;
+  fill: var(--accent-color-dark);
 }
 
 .theme-dark .card__like-button:focus,
@@ -233,7 +219,7 @@
 
 .theme-dark .card__like-button:focus-visible,
 .theme-dark .footer-button:focus-visible {
-  box-shadow: 2px 2px 0px #00cc14;
+  box-shadow: 2px 2px 0px var(--accent-color-dark);
   transition: box-shadow 0.5s;
 }
 
@@ -241,18 +227,8 @@
   position: absolute;
   z-index: 1;
   transition: 0.5s ease-in-out;
-  color: #00cc14;
+  color: var(--accent-color-dark);
   mix-blend-mode: difference;
-}
-
-.theme-dark .card__like-button::after {
-  content: "";
-  display: block;
-  background-color: #00cc14;
-  translate: -100%;
-  transition: translate 0.5s ease-in-out;
-  position: relative;
-  z-index: 0;
 }
 
 .theme-dark .card__like-button:hover::after {
@@ -262,12 +238,15 @@
   position: relative;
 }
 
+.theme-dark .card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color-dark);
+}
 .theme-dark .core {
   transition: 0.03s;
 }
 
 .theme-dark .like-icon:hover .core {
-  fill: #00cc14;
+  fill: var(--accent-color-dark);
   transition: fill 0.3s;
 }
 
@@ -276,62 +255,42 @@
 }
 
 .theme-dark .like-icon:hover .main-body {
-  fill: #00cc14;
+  fill: var(--accent-color-dark);
   transition: fill 0.3s 0.05s;
 }
 
 .theme-dark .like-icon:active .core {
-  fill: #ff0000;
+  fill: var(--heart-animation-color);
   transition: fill 0.3s;
 }
 
 .theme-dark .like-icon:active .main-body {
-  fill: #ff0000;
+  fill: var(--heart-animation-color);
   transition: fill 0.3s 0.05s;
 }
 
+.theme-dark .footer-button__text,
+.theme-dark .floppy {
+  color: var(--accent-color-dark);
+  }
+
+  .theme-dark .main-body {
+  fill: var(--accent-color-light);
+  }
+  
+  .theme-dark .core {
+    fill: var(--accent-color-light);
+  }
+
 @media (prefers-color-scheme: light) {
-  .theme-auto .theme-menu__list::after {
-    content: "▶";
-    position: absolute;
-    right: 100px;
-    top: 27px;
-    animation: arrow 0.5s ease-in-out infinite;
-    opacity: 0.6;
-  }
 
-  .theme-auto .theme-menu__button__auto {
-    opacity: 0.6;
-  }
-
-  .theme-auto .theme-menu__button__auto {
-    pointer-events: none;
-  }
-
-  .theme-auto .card__icon-button:focus {
+.theme-auto .card__icon-button:focus {
     outline: none;
   }
 }
 
-.theme-light .theme-menu__button__light {
-  pointer-events: none;
-}
-
-.theme-light .theme-menu__button__light {
-  opacity: 0.6;
-}
-
 .theme-light .theme-menu__button:focus {
   outline: none;
-}
-
-.theme-light .theme-menu__list::after {
-  content: "▶";
-  position: absolute;
-  right: 100px;
-  top: 56px;
-  animation: arrow 0.5s ease-in-out infinite;
-  opacity: 0.6;
 }
 
 .theme-light .theme-menu__button:focus-visible {
