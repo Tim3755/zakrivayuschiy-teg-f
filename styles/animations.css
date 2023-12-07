@@ -22,7 +22,7 @@
 
 @keyframes arrow {
   0% {
-   left: -10px;
+    left: -10px;
   }
 
   100% {
@@ -69,8 +69,8 @@
 }
 
 .like-icon.is-liked .main-body {
- fill: var(--heart-animation-color);
- transition: fill 0.3s ease; 
+  fill: var(--heart-animation-color);
+  transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .contour {
@@ -96,10 +96,12 @@
   from {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.5);
   }
-  to{
+  
+  to {
     transform: scale(1);
   }
 }
@@ -108,9 +110,11 @@
   from {
     fill: none;
   }
+
   50% {
-   fill:var(--heart-animation-color);
+    fill: var(--heart-animation-color);
   }
+
   to {
     fill: none;
   }
@@ -146,7 +150,7 @@
 }
 
 .footer-button::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--accent-color-light);
   translate: -100%;
