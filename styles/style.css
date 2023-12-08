@@ -27,7 +27,7 @@
   background-size: cover;
   background-attachment: fixed;
   margin: auto;
-  color: var(--accent-color-light);
+  color: var(--main-color);
   font-variation-settings: "wght" 400;
 }
 
@@ -36,8 +36,8 @@
   flex-direction: column;
   align-items: center;
   margin: 100px auto;
-  border: 2px solid var(--accent-color-light);
-  background-color: white;
+  border: 2px solid var(--main-color);
+  background-color: var(--accent-color);
   max-width: clamp(23.438rem, 16.373rem + 30.141vw, 43.5rem);
 }
 
@@ -106,7 +106,7 @@
   width: 0%;
   height: 2px;
   margin-top: 2px;
-  background-color: var(--accent-color-light);
+  background-color: var(--main-color);
   transition: width 0.3s, background-color 0.5s;
 }
 
@@ -126,8 +126,8 @@
 .card-list__item {
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--accent-color-light);
-  background-color: white;
+  border: 2px solid var(--main-color);
+  background-color: var(--accent-color);
   gap: 5px;
 }
 
@@ -146,16 +146,18 @@
 .label {
   position: absolute;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 0.2px white;
+  -webkit-text-stroke: 0.2px var(--accent-color);
   top: 25px;
   right: 11px;
   z-index: 1;
 }
 
-@supports ((text-stroke: 0.2px white) or (-webkit-text-stroke: 0.2px white)) {
+@supports (
+  (text-stroke: 0.2px white) or (-webkit-text-stroke: 0.2px var(--accent-color))
+) {
   .label {
-    -webkit-text-stroke: 0.2px white;
-    text-stroke: 0.2px white;
+    -webkit-text-stroke: 0.2px var(--accent-color);
+    text-stroke: 0.2px var(--accent-color);
     text-shadow: none;
   }
 }
@@ -194,7 +196,7 @@
   background-color: transparent;
   width: 130px;
   height: 38px;
-  border: 2px solid var(--accent-color-light);
+  border: 2px solid var(--main-color);
   margin-block-end: 25px;
   display: flex;
   align-items: center;
@@ -213,7 +215,7 @@
   position: absolute;
   z-index: 1;
   transition: 0.5s ease-in-out;
-  color: white;
+  color: var(--accent-color);
   mix-blend-mode: difference;
 }
 
@@ -258,9 +260,9 @@
 
 .footer {
   max-width: 335px;
-  border: 2px solid var(--accent-color-light);
+  border: 2px solid var(--main-color);
   margin: 50px auto 105px;
-  background-color: white;
+  background-color: var(--accent-color);
 }
 
 .footer-button {
@@ -282,7 +284,7 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
-  color: white;
+  color: var(--accent-color);
 }
 
 .floppy-icon {
@@ -313,17 +315,23 @@
 
 .dialog-description {
   display: flex;
-  gap: 20px;
   align-items: center;
-  font-size: 11px;
+  margin-left: 18px;
+  margin-right: 24px;
   line-height: 21px;
+  gap: 20px;
+}
+
+.dialog-description__text {
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 .close-button {
   background-color: transparent;
-  min-width: 293px;
   min-height: 38px;
+  width: 293px;
   font-size: 14px;
   text-transform: uppercase;
   display: flex;
@@ -331,6 +339,8 @@
   align-items: center;
   overflow: hidden;
   padding: 0;
+  border: 2px solid var(--main-color);
+  align-self: center;
 }
 
 .close-button:focus {
@@ -344,21 +354,17 @@
 }
 
 .main-body {
-  fill: none;
+  fill: var(--accent-color);
 }
 
 .core {
-  fill: none;
+  fill: var(--accent-color);
 }
 /* Для смартфонов*/
 
 @media (width <= 376px) {
   .page {
     min-width: 100vw;
-  }
-
-  .header {
-    max-height: 49vh;
   }
 
   .header-label {
@@ -382,7 +388,7 @@
   }
 
   .close-button {
-    max-width: 257px;
+    max-width: 260px;
   }
 
   .padding-text {
@@ -405,10 +411,10 @@
 
 .card__like-button:focus-visible,
 .footer-button:focus-visible {
-  box-shadow: 2px 2px 0px var(--accent-color-light);
+  box-shadow: 2px 2px 0px var(--main-color);
   transition: box-shadow 0.5s;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color-light);
+  border: 2px solid var(--main-color);
 }
