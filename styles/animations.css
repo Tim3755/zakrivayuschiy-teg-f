@@ -18,15 +18,19 @@
   content: "▶";
   position: absolute;
   animation: arrow 0.5s ease-in-out infinite alternate;
+  left: -14px;
+  top: 1px;
 }
 
 @keyframes arrow {
   0% {
     left: -10px;
+    top: 1px;
   }
 
   100% {
     left: -14px;
+    top: 1px;
   }
 }
 
@@ -134,7 +138,7 @@
 }
 
 .card__like-button:hover::after {
-  translate: 0%;
+  translate: 0;
   position: relative;
   transition: translate 0.5s ease-in-out;
 }
@@ -153,7 +157,7 @@
   content: "";
   position: absolute;
   background-color: var(--main-color);
-  translate: -100%;
+  translate: -100% 0;
   transition: translate 0.5s ease-in-out;
   z-index: 0;
   width: 100%;
@@ -161,7 +165,7 @@
 }
 
 .footer-button:hover::after {
-  translate: 0;
+  translate: 0 0;
   transition: translate 0.5s ease-in-out;
 }
 

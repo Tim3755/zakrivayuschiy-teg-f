@@ -4,5 +4,11 @@
   --secondary-font: "PressStart2P";
   --heart-animation-color: #ff0000;
   --main-color: #000;
-  --accent-color: #FFF;
+  --accent-color: #fff;
+  --button-text-color: #fff;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --rep-lin-grad-color: #d3d3d3;
+  --lin-grad-start-color: #e7e7e7;
+  --lin-grad-end-color: #1a1a1a;
 }
